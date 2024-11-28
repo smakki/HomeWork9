@@ -40,6 +40,7 @@ internal class BinaryTree
     }
     public static TreeNode? FindNodeByValue(TreeNode root, int value)
     {
+        if (root == null) return null;
         if (root.Value == value) return root;
         return root.Value > value ? FindNodeByValue(root.Left, value)! : FindNodeByValue(root.Right, value)!;
     }
